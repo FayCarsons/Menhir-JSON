@@ -1,0 +1,8 @@
+lib: [
+  "_build/install/default/lib/menhirjson/META"
+  "_build/install/default/lib/menhirjson/dune-package"
+  "_build/install/default/lib/menhirjson/opam"
+]
+bin: [
+  "_build/install/default/bin/json_parser"
+]

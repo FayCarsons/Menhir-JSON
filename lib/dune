@@ -1,0 +1,10 @@
+(menhir
+ (modules grammar)
+ (flags --table --inspection --dump))
+
+(ocamllex lexer)
+
+(library
+ (name menhirjson)
+ (libraries menhirLib core core_unix)
+ (modules lexer json grammar main))
