@@ -32,7 +32,7 @@ rule read =
   | ']' { RIGHT_BRACKET }
   | ':' { COLON }
   | ',' { COMMA }
-  | _ { raise @@ Invalid ("Illegal char: " ^ Lexing.lexeme lexbuf) }
+  | _ { raise @@ Invalid (Printf.sprintf "Illegal char \'%s\'"  ( Lexing.lexeme lexbuf )) }
   | eof { EOF }
 
 and read_string buf = 

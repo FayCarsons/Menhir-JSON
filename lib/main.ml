@@ -12,6 +12,9 @@ let parse_with_error lexbuf =
   | Invalid msg ->
     fprintf stdout "%a: %s\n" print_position lexbuf msg;
     None
+  | Malformed_string msg -> 
+    fprintf stdout "Invalid string syntax at %a %s\n" print_position lexbuf msg ;
+    None
   | Grammar.Error ->
     fprintf stdout "%a: syntax error\n" print_position lexbuf;
     exit (-1)
